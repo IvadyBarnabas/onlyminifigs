@@ -1,0 +1,109 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+color:#222;
+}
+
+header{
+background:white;
+padding:20px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#0077ff;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:#e9eef5;
+}
+
+.button{
+background:#0077ff;
+color:white;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+margin-top:15px;
+}
+
+.page-title{
+text-align:center;
+margin-top:40px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:120px;
+height:120px;
+object-fit:contain;
+}
+
+.price{
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.stock{
+font-weight:bold;
+}
+
+.stock.in{
+color:green;
+}
+
+.stock.out{
+color:red;
+}
+
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:disabled{
+background:gray;
+cursor:not-allowed;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:white;
+margin-top:40px;box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+}
