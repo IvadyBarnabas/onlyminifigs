@@ -25,20 +25,43 @@
 <div class="products">
     <div class="card">
         <p class="status-badge raktaron">Raktáron</p>
-        <h3>Zane - The Golden Weapons</h3>
-        <a href=""><img src="kepek/zanes1.webp" alt="Zane - The Golden Weapons"></a>
+        <h3>Lego Ninjago - The Golden Weapons</h3>
+        <div class="image-slider">
+            <button class="prev">❮</button>
+            <a href="">
+            <div class="images">
+                <img src="kepek/kais1.webp">
+                <img src="kepek/zanes1.webp">
+                <img src="kepek/coles1.webp">
+                <img src="kepek/jays1.webp">
+            </div>
+            </a>
+            <button class="next">❯</button>
+        </div>
         <div class="infos">
-            <p class="price">3 990 Ft</p>
+            <p class="price">3 990 Ft/DB</p>
             <button>Kosárba</button>
         </div>
     </div>
+
     <div class="card">
-        <h3>Kai - The Golden Weapons</h3>
-        <a href=""><img src="kepek/kais1.webp" alt="Kai - The Golden Weapons"></a>
+        <p class="status-badge raktaron">Raktáron</p>
+        <h3>Lego Ninjago - DX</h3>
+        <div class="image-slider">
+            <button class="prev">❮</button>
+            <a href="">
+            <div class="images">
+                <img src="kepek/kaiDX.webp">
+                <img src="kepek/zaneDX.webp">
+                <img src="kepek/coleDX.webp">
+                <img src="kepek/jayDX.webp">
+            </div>
+            </a>
+            <button class="next">❯</button>
+        </div>
         <div class="infos">
-            <p class="price">3 990 Ft</p>
+            <p class="price">3 990 Ft/DB</p>
             <button>Kosárba</button>
-            <p class="status-badge raktaron">Raktáron</p>
         </div>
     </div>
 
@@ -103,3 +126,27 @@
 
 </body>
 </html>
+<script>
+const sliders = document.querySelectorAll(".image-slider");
+
+sliders.forEach(slider => {
+
+    const images = slider.querySelector(".images");
+    const img = slider.querySelectorAll("img");
+
+    let index = 0;
+
+    slider.querySelector(".next").onclick = () =>{
+        index++;
+        if(index >= img.length) index = 0;
+        images.style.transform = "translateX(-"+index*100+"%)";
+    }
+
+    slider.querySelector(".prev").onclick = () =>{
+        index--;
+        if(index < 0) index = img.length-1;
+        images.style.transform = "translateX(-"+index*100+"%)";
+    }
+
+});
+</script>

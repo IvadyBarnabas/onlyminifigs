@@ -135,7 +135,7 @@ box-shadow:0 12px 24px rgba(0,0,0,0.15);
 
 .card img{
 width:auto;
-height:180px;
+height:200px;
 object-fit:contain;
 margin-bottom:10px;
 animation: fadeIn 1s ease forwards;
@@ -176,6 +176,43 @@ button:disabled{
 background:gray;
 cursor:not-allowed;
 }
+/* Imgae Slide */
+    .image-slider{
+    position: relative;
+    overflow: hidden;
+}
+
+.images{
+    display:flex;
+    transition:0.4s;
+}
+
+.images img{
+    width:100%;
+    flex-shrink:0;
+}
+
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.prev{
+    left:5px;
+}
+
+.next{
+    right:5px;
+}
+
+
+
 
 /* INFO CARDS */
 .info-cards{
@@ -211,4 +248,15 @@ padding:25px;
 @keyframes fadeIn{
 0%{opacity:0; transform:translateY(20px);}
 100%{opacity:1; transform:translateY(0);}
+}
+@media screen and (max-width: 1000px) {
+    .products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
 }
